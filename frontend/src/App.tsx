@@ -94,14 +94,13 @@ const App = () => {
 
   const paginateData = () => {
     const start = (state.page - 1) * logsPerPage;
-    // Reverse the filtered data so the most recent logs appear first
     return filteredData().slice().reverse().slice(start, start + logsPerPage);
   };
 
   // Handler for Search button
   const handleApplyFilters = () => {
     dispatch({ type: 'CHANGE_PAGE', payload: 1 });
-    // Optionally, you can trigger a fetch or update here if needed
+
   };
 
   // Handler for toggling filter bar
@@ -264,7 +263,7 @@ const App = () => {
       <Alert_Dialog />
       <Add_LogForm onLogAdded={fetchLogs} />
       {
-        paginateData().length > 10 && <Footer />
+        logsData.length > 10 && <Footer />
       }
 
     </>

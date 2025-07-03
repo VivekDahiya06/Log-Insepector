@@ -9,7 +9,7 @@ import { POSTLogs } from '../../api/logsAPI';
 import { v4 as uuid4 } from 'uuid';
 import type { FC } from 'react';
 
-interface AddLogFormProps{
+interface AddLogFormProps {
     onLogAdded?: () => void;
 }
 
@@ -17,7 +17,7 @@ const LEVELS = ['error', 'warn', 'info', 'debug'];
 
 type LogFormFields = Omit<Log, 'id' | 'timestamp' | 'metadata' | 'commit'>;
 
-const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
+const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
     // States & Hooks
     const { state, dispatch } = useStore();
     const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm<LogFormFields>({
@@ -61,14 +61,17 @@ const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
         <Dialog
             open={state.formOpen}
             onClose={handleClose}
-            maxWidth="md"
+            maxWidth="sm"
+            fullWidth
         >
             <DialogTitle
                 sx={{
                     fontSize: '2rem',
                     fontWeight: 'bolder',
-                    '@media screen and (width <= 380px)': {
-                        fontSize: '1.5rem',
+                    '@media (max-width: 480px)': {
+                        fontSize: '1.2rem',
+                        px: 1,
+                        py: 1,
                     },
                     textTransform: 'capitalize',
                 }}
@@ -76,12 +79,12 @@ const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
                 Add Log
             </DialogTitle>
 
-            <main className="w-full p-5 flex gap-3">
+            <main className="w-full p-5 flex flex-col gap-3 sm:gap-5">
                 <form
                     onSubmit={handleSubmit(SubmitForm)}
-                    className="w-full min-w-xl flex flex-col items-center justify-center gap-4"
+                    className="w-full flex flex-col items-center justify-center gap-4"
                 >
-                    <Box className="w-full flex flex-col items-center justify-center gap-5">
+                    <Box className="w-full flex flex-col gap-4 sm:gap-5">
                         <FormControl fullWidth error={!!errors.level}>
                             <InputLabel id="level-label">Level</InputLabel>
                             <Select
@@ -105,6 +108,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
                             fullWidth
                             multiline
                             minRows={3}
+                            sx={{
+                                fontSize: { xs: '0.95rem', sm: '1rem' },
+                            }}
                         />
                         <TextField
                             label="Resource ID"
@@ -112,6 +118,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
                             error={!!errors.resourceId}
                             helperText={errors.resourceId?.message as string}
                             fullWidth
+                            sx={{
+                                fontSize: { xs: '0.95rem', sm: '1rem' },
+                            }}
                         />
                         <TextField
                             label="Trace ID"
@@ -119,6 +128,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
                             error={!!errors.traceId}
                             helperText={errors.traceId?.message as string}
                             fullWidth
+                            sx={{
+                                fontSize: { xs: '0.95rem', sm: '1rem' },
+                            }}
                         />
                         <TextField
                             label="Span ID"
@@ -126,15 +138,18 @@ const Add_LogForm: FC<AddLogFormProps> = ({onLogAdded}) => {
                             error={!!errors.spanId}
                             helperText={errors.spanId?.message as string}
                             fullWidth
+                            sx={{
+                                fontSize: { xs: '0.95rem', sm: '1rem' },
+                            }}
                         />
                     </Box>
 
                     <Button
                         sx={{
-                            mt: 2,
-                            '@media (max-width: 520px)': {
-                                mt: 1,
-                            },
+                            width: { xs: '100%', sm: 'auto' },
+                            fontSize: { xs: '1rem', sm: '1.1rem' },
+                            py: { xs: 1.2, sm: 1 },
+                            mt: { xs: 1, sm: 2 },
                         }}
                         variant="contained"
                         endIcon={<IoIosAddCircleOutline />}

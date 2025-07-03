@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { useStore } from '../../hooks/useStore';
 import ToolTip from '../tooltip/CustomToolTip';
 // import logo from '/images/logo.png';
-import { MdSearch } from "react-icons/md";
+// import { MdSearch } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { FaFileContract } from "react-icons/fa";
-import { IconButton, TextField, InputAdornment } from '@mui/material';
+import { IconButton } from '@mui/material';
 import Menu_Component from '../menu/MenuComponent';
 
 
@@ -14,7 +14,7 @@ const Header = () => {
 
     // States & Hooks
     const { state, dispatch } = useStore();
-    const [search, setSearch] = useState<string>("");
+    // const [search, setSearch] = useState<string>("");
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
@@ -24,10 +24,6 @@ const Header = () => {
 
 
     // Functions
-    const handle_Search = () => {
-        dispatch({ type: 'SET_SEARCH_LOG_FILTER', payload: search });
-        dispatch({ type: 'CHANGE_PAGE', payload: 1 });
-    }
 
     const handle_AddLog = () => {
         console.log("form Open")
@@ -59,7 +55,7 @@ const Header = () => {
                     <Menu_Component handle_AddLog={handle_AddLog} handleClose={handle_closeMenu} anchorEl={anchorEl} open={open} />
                 </div>
 
-                <div className='hidden md:flex gap-8 items-center justify-center'>
+                <div className='hidden md:flex gap-8 mr-20 items-center justify-center'>
                     <ToolTip
                         title="Add Log"
                     >
@@ -67,7 +63,7 @@ const Header = () => {
                             <FaFileContract size={24} color='#000' />
                         </IconButton>
                     </ToolTip>
-                    <TextField
+                    {/* <TextField
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search log..."
@@ -82,7 +78,7 @@ const Header = () => {
                             style: { backgroundColor: "#fff", borderRadius: 4 },
                         }}
                         size="small"
-                    />
+                    /> */}
                 </div>
             </nav>
         </header>
