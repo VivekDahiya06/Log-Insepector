@@ -1,77 +1,56 @@
 {
     "logs": [
         {
-            "id": "6fe254c0-c517-4fa6-b4cb-12ae7c5fdde7",
-            "level": "error",
-            "message": "Failed to connect to database.",
-            "resourceId": "server-1234",
-            "timestamp": "2023-09-15T08:00:00.000Z",
-            "traceId": "abc-xyz-123",
-            "spanId": "span-456",
-            "commit": "5e5342f",
-            "metadata": {
-                "env": "production",
-                "region": "us-east-1"
-            }
-        },
-        {
-            "id": "79437bf1-b099-41c9-92db-59d6aa82696c",
+            "id": "3c90068e-fdf7-4d39-adb6-4f74090e2d0a",
             "level": "warn",
-            "message": "Memory usage exceeded 80%.",
-            "resourceId": "server-5678",
-            "timestamp": "2023-09-15T09:30:00.000Z",
-            "traceId": "def-ghi-456",
-            "spanId": "span-789",
-            "commit": "6a2f3c1",
+            "message": "Server not working",
+            "resourceId": "res-12345",
+            "timestamp": "2025-07-03T13:11:24.393Z",
+            "traceId": "abc-1234",
+            "spanId": "span-1234",
+            "commit": "0a80b24",
             "metadata": {
-                "env": "staging",
-                "region": "eu-west-2",
-                "memoryUsage": "82%"
+                "random": "6txiatvb"
             }
         },
         {
-            "id": "f8067671-fdbc-4ac8-bd1d-b5f28fa3d760",
+            "id": "34a4e5d8-4d05-45ff-a0f2-43c4e5ac4228",
             "level": "info",
-            "message": "User logged in successfully.",
-            "resourceId": "auth-service",
-            "timestamp": "2023-09-15T10:05:00.000Z",
-            "traceId": "ghi-jkl-789",
-            "spanId": "span-321",
-            "commit": "9d82abc",
+            "message": "File upload completed.",
+            "resourceId": "res-file789",
+            "timestamp": "2025-07-03T12:34:56.000Z",
+            "traceId": "file-8080",
+            "spanId": "span-456",
+            "commit": "commit123sha",
             "metadata": {
-                "env": "production",
-                "userId": "user-9843",
-                "ip": "192.168.1.10"
+                "fileSize": "2MB",
+                "fileType": "image/png"
             }
         },
         {
-            "id": "424b458e-6c7e-49fa-87f2-883113d83082",
-            "level": "debug",
-            "message": "Fetched 200 items from /api/products.",
-            "resourceId": "api-gateway",
-            "timestamp": "2023-09-15T11:15:00.000Z",
-            "traceId": "lmn-opq-234",
-            "spanId": "span-222",
-            "commit": "fe91b3e",
-            "metadata": {
-                "env": "development",
-                "region": "localhost",
-                "queryTime": "120ms",
-                "cache": "hit"
-            }
-        },
-        {
-            "id": "611ebb90-b135-4d5a-9115-9cebb4dd11c2",
+            "id": "61ce594e-bdaf-4222-b129-21454d344c6c",
             "level": "error",
-            "message": "Failed to connect to database.",
-            "resourceId": "resServer01",
-            "timestamp": "2023-09-15T08:00:00Z",
-            "traceId": "a1b2c3d4e5f6a7b8",
-            "spanId": "1a2b3c4d",
-            "commit": "5e5342f",
+            "message": "400 Request from server",
+            "resourceId": "res-12789",
+            "timestamp": "2025-07-03T16:05:30.203Z",
+            "traceId": "trans-140",
+            "spanId": "span-2042",
+            "commit": "c6465d9",
             "metadata": {
-                "env": "production",
-                "region": "us-east-1"
+                "random": "fkklygwg"
+            }
+        },
+        {
+            "id": "a13692e4-6ab8-4f81-93e8-428ef92425e0",
+            "level": "debug",
+            "message": "some error in shema",
+            "resourceId": "res-93422",
+            "timestamp": "2025-07-03T16:12:01.421Z",
+            "traceId": "tarns-234124",
+            "spanId": "span-3452354",
+            "commit": "e1b15b1",
+            "metadata": {
+                "random": "qgc6tvq5"
             }
         }
     ]

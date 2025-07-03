@@ -10,3 +10,5 @@ export const LogSchema = z.object({
     commit: z.string(),
     metadata: z.record(z.any()).optional()
 });
+
+export type Log = z.infer<typeof LogSchema> & { id: string };
