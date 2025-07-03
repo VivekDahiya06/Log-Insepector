@@ -2,8 +2,7 @@ import axios from "axios";
 import type { Log } from "../types/log.types";
 
 
-// const remoteUrl = 'https://my-json-server.typicode.com/VivekDahiya06/Book-Management-System/books';
-const Url = 'http://localhost:3002/logs';
+const Url = 'http://localhost:3001/logs';
 
 export const GETAllLogs = async (): Promise<Log[]> => {
     const response = await axios.get(Url);

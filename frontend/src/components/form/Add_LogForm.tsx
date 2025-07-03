@@ -61,17 +61,14 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
         <Dialog
             open={state.formOpen}
             onClose={handleClose}
-            maxWidth="sm"
-            fullWidth
+            maxWidth="md"
         >
             <DialogTitle
                 sx={{
                     fontSize: '2rem',
                     fontWeight: 'bolder',
-                    '@media (max-width: 480px)': {
-                        fontSize: '1.2rem',
-                        px: 1,
-                        py: 1,
+                    '@media screen and (width <= 380px)': {
+                        fontSize: '1.5rem',
                     },
                     textTransform: 'capitalize',
                 }}
@@ -79,12 +76,12 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                 Add Log
             </DialogTitle>
 
-            <main className="w-full p-5 flex flex-col gap-3 sm:gap-5">
+            <main className="w-full p-5 flex gap-3">
                 <form
                     onSubmit={handleSubmit(SubmitForm)}
-                    className="w-full flex flex-col items-center justify-center gap-4"
+                    className="w-full min-w-xl flex flex-col items-center justify-center gap-4"
                 >
-                    <Box className="w-full flex flex-col gap-4 sm:gap-5">
+                    <Box className="w-full flex flex-col items-center justify-center gap-5">
                         <FormControl fullWidth error={!!errors.level}>
                             <InputLabel id="level-label">Level</InputLabel>
                             <Select
@@ -146,10 +143,10 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
 
                     <Button
                         sx={{
-                            width: { xs: '100%', sm: 'auto' },
-                            fontSize: { xs: '1rem', sm: '1.1rem' },
-                            py: { xs: 1.2, sm: 1 },
-                            mt: { xs: 1, sm: 2 },
+                            mt: 2,
+                            '@media (max-width: 520px)': {
+                                mt: 1,
+                            },
                         }}
                         variant="contained"
                         endIcon={<IoIosAddCircleOutline />}

@@ -12,6 +12,7 @@ import { GETAllLogs } from './api/logsAPI';
 import Add_LogForm from './components/form/Add_LogForm';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import ToolTip from './components/tooltip/CustomToolTip';
 
 const LEVELS = ['error', 'warn', 'info', 'debug'];
 
@@ -134,14 +135,18 @@ const App = () => {
         {/* Responsive Filter Toggle and Bar */}
         <div className="w-full flex flex-col sm:flex-row sm:items-center gap-2 mb-4 min-h-[88px]">
           <div className="w-full sm:w-auto flex justify-start">
-            <IconButton
-              onClick={handleToggleFilter}
-              aria-label="Toggle filter bar"
-              size="large"
-              sx={{ display: { xs: 'none', sm: 'block' }, color: '#000' }}
+            <ToolTip
+              title='Filter'
             >
-              {showFilter ? <RiFilter2Fill color='#000' size={24} /> : <RiFilter2Line color='#000' size={24} />}
-            </IconButton>
+              <IconButton
+                onClick={handleToggleFilter}
+                aria-label="Toggle filter bar"
+                size="large"
+                sx={{ display: { xs: 'none', sm: 'block' }, color: '#000' }}
+              >
+                {showFilter ? <RiFilter2Fill color='#000' size={24} /> : <RiFilter2Line color='#000' size={24} />}
+              </IconButton>
+            </ToolTip>
             <Button
               variant="contained"
               sx={{

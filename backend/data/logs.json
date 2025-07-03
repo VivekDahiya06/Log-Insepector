@@ -1,20 +1,7 @@
 {
     "logs": [
         {
-            "id": "3c90068e-fdf7-4d39-adb6-4f74090e2d0a",
-            "level": "warn",
-            "message": "Server not working",
-            "resourceId": "res-12345",
-            "timestamp": "2025-07-03T13:11:24.393Z",
-            "traceId": "abc-1234",
-            "spanId": "span-1234",
-            "commit": "0a80b24",
-            "metadata": {
-                "random": "6txiatvb"
-            }
-        },
-        {
-            "id": "34a4e5d8-4d05-45ff-a0f2-43c4e5ac4228",
+            "id": "32045960-a286-45bd-9ee1-047b0d6fde84",
             "level": "info",
             "message": "File upload completed.",
             "resourceId": "res-file789",
@@ -28,121 +15,11 @@
             }
         },
         {
-            "id": "61ce594e-bdaf-4222-b129-21454d344c6c",
-            "level": "error",
-            "message": "400 Request from server",
-            "resourceId": "res-12789",
-            "timestamp": "2025-07-03T16:05:30.203Z",
-            "traceId": "trans-140",
-            "spanId": "span-2042",
-            "commit": "c6465d9",
-            "metadata": {
-                "random": "fkklygwg"
-            }
-        },
-        {
-            "id": "a13692e4-6ab8-4f81-93e8-428ef92425e0",
-            "level": "debug",
-            "message": "some error in shema",
-            "resourceId": "res-93422",
-            "timestamp": "2025-07-03T16:12:01.421Z",
-            "traceId": "tarns-234124",
-            "spanId": "span-3452354",
-            "commit": "e1b15b1",
-            "metadata": {
-                "random": "qgc6tvq5"
-            }
-        },
-        {
-            "id": "6e38e178-9dea-4420-8c64-e0e074ae5c32",
+            "id": "029a7567-2bf2-4e8d-8d1e-18d262263d7f",
             "level": "info",
             "message": "File upload completed.",
             "resourceId": "res-file789",
             "timestamp": "2025-07-03T12:34:56.000Z",
-            "traceId": "file-8080",
-            "spanId": "span-456",
-            "commit": "commit123sha",
-            "metadata": {
-                "fileSize": "2MB",
-                "fileType": "image/png"
-            }
-        },
-        {
-            "id": "a3bee173-36e1-4702-80f9-1850051d4a8a",
-            "level": "info",
-            "message": "File upload completed.",
-            "resourceId": "res-file789",
-            "timestamp": "2025-07-03T12:34:56.000Z",
-            "traceId": "file-8080",
-            "spanId": "span-456",
-            "commit": "commit123sha",
-            "metadata": {
-                "fileSize": "2MB",
-                "fileType": "image/png"
-            }
-        },
-        {
-            "id": "5c95becf-38fc-4363-b3c4-a6274070f35d",
-            "level": "info",
-            "message": "File upload completed.",
-            "resourceId": "res-file789",
-            "timestamp": "2025-07-03T12:34:56.000Z",
-            "traceId": "file-8080",
-            "spanId": "span-456",
-            "commit": "commit123sha",
-            "metadata": {
-                "fileSize": "2MB",
-                "fileType": "image/png"
-            }
-        },
-        {
-            "id": "924b5afa-70f7-4e0e-91a9-4384752f8d11",
-            "level": "info",
-            "message": "File upload completed.",
-            "resourceId": "res-file789",
-            "timestamp": "2025-07-03T12:34:56.000Z",
-            "traceId": "file-8080",
-            "spanId": "span-456",
-            "commit": "commit123sha",
-            "metadata": {
-                "fileSize": "2MB",
-                "fileType": "image/png"
-            }
-        },
-        {
-            "id": "4945cf50-8394-4d83-90a9-0be250de21ec",
-            "level": "info",
-            "message": "File upload completed.",
-            "resourceId": "res-file789",
-            "timestamp": "2025-07-03T12:34:56.000Z",
-            "traceId": "file-8080",
-            "spanId": "span-456",
-            "commit": "commit123sha",
-            "metadata": {
-                "fileSize": "2MB",
-                "fileType": "image/png"
-            }
-        },
-        {
-            "id": "283392e4-58a9-4eb6-8ae5-b96a73723854",
-            "level": "info",
-            "message": "File upload completed.",
-            "resourceId": "res-file789",
-            "timestamp": "2025-07-03T12:34:56.000Z",
-            "traceId": "file-8080",
-            "spanId": "span-456",
-            "commit": "commit123sha",
-            "metadata": {
-                "fileSize": "2MB",
-                "fileType": "image/png"
-            }
-        },
-        {
-            "id": "6b46f828-d04c-4719-b99e-36ecaf1a15f3",
-            "level": "info",
-            "message": "File upload completed.",
-            "resourceId": "res-file789",
-            "timestamp": "2025-07-03T12:34:56Z",
             "traceId": "file-8080",
             "spanId": "span-456",
             "commit": "commit123sha",
