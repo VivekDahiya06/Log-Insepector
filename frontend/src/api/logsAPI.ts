@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Log } from "../types/log.types";
 
 
-const Url = 'http://localhost:3001/logs';
+const Url = import.meta.env.VITE_REMOTE_URL;
 
 export const GETAllLogs = async (): Promise<Log[]> => {
     const response = await axios.get(Url);
