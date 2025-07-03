@@ -1,5 +1,7 @@
 import type { ReducerActionType, ReducerStateType } from "../types/Reducer.types"
 
+
+// Initial State.
 export const initialState: ReducerStateType = {
     page: 1,
     totalPages: 0,

@@ -9,10 +9,12 @@ import { POSTLogs } from '../../api/logsAPI';
 import { v4 as uuid4 } from 'uuid';
 import type { FC } from 'react';
 
+// type definition of props
 interface AddLogFormProps {
     onLogAdded?: () => void;
 }
 
+// Allowed enum values for levels.
 const LEVELS = ['error', 'warn', 'info', 'debug'];
 
 type LogFormFields = Omit<Log, 'id' | 'timestamp' | 'metadata' | 'commit'>;

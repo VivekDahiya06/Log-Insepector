@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useStore } from '../../hooks/useStore';
 import ToolTip from '../tooltip/CustomToolTip';
 // import logo from '/images/logo.png';
-// import { MdSearch } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { FaFileContract } from "react-icons/fa";
@@ -14,7 +13,6 @@ const Header = () => {
 
     // States & Hooks
     const { state, dispatch } = useStore();
-    // const [search, setSearch] = useState<string>("");
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
@@ -63,22 +61,6 @@ const Header = () => {
                             <FaFileContract size={24} color='#000' />
                         </IconButton>
                     </ToolTip>
-                    {/* <TextField
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        placeholder="Search log..."
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <IconButton onClick={handle_Search}>
-                                        <MdSearch size={24} />
-                                    </IconButton>
-                                </InputAdornment>
-                            ),
-                            style: { backgroundColor: "#fff", borderRadius: 4 },
-                        }}
-                        size="small"
-                    /> */}
                 </div>
             </nav>
         </header>
