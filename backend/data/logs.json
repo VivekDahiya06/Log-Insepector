@@ -49,7 +49,7 @@
             "level": "debug",
             "message": "Fetched 200 items from /api/products.",
             "resourceId": "api-gateway",
-            "timestamp": "2023-09-15T11:15:00Z",
+            "timestamp": "2023-09-15T11:15:00.000Z",
             "traceId": "lmn-opq-234",
             "spanId": "span-222",
             "commit": "fe91b3e",
@@ -58,6 +58,20 @@
                 "region": "localhost",
                 "queryTime": "120ms",
                 "cache": "hit"
+            }
+        },
+        {
+            "id": "611ebb90-b135-4d5a-9115-9cebb4dd11c2",
+            "level": "error",
+            "message": "Failed to connect to database.",
+            "resourceId": "resServer01",
+            "timestamp": "2023-09-15T08:00:00Z",
+            "traceId": "a1b2c3d4e5f6a7b8",
+            "spanId": "1a2b3c4d",
+            "commit": "5e5342f",
+            "metadata": {
+                "env": "production",
+                "region": "us-east-1"
             }
         }
     ]
