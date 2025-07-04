@@ -89,7 +89,7 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
             <main className="w-full p-5 flex flex-col gap-3 sm:flex-row sm:gap-3">
                 <form
                     onSubmit={handleSubmit(SubmitForm)}
-                    className="w-full flex flex-col items-center justify-center gap-4"
+                    className="w-full min-w-[200px] sm:min-w-[400px] flex flex-col items-center justify-center gap-4"
                 >
                     <Box className="w-full flex flex-col items-center justify-center gap-5">
                         <FormControl fullWidth error={!!errors.level}>
