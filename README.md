@@ -78,7 +78,7 @@ frontend/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/Log-Inspector.git
+git clone https://github.com/VivekDahiya06/Log-Insepector.git
 cd Log-Inspector
 ```
 
@@ -123,12 +123,11 @@ npm start
 ## 🚀 Deployment
 
 ### 🟦 Render (Backend)
-- The backend is ready for Vercel deployment. Vercel will use the `start` script in `backend/package.json`.
-- No build step is required for the backend.
+- The backend is ready for Render deployment. Render will use the `start` script in `backend/package.json`.
+- Render will use `npm install` as a build command before running the `start` script.
 
 ### ▲ Vercel (Frontend)
-- The frontend is a standard React app and can be deployed to Vercel, Netlify, or any static hosting.
-
+- The frontend is a standard React app and can be deployed to Vercel.
 ---
 
 ## 🛠️ Technologies Used
