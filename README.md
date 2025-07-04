@@ -74,6 +74,37 @@ frontend/
 
 ---
 
+## 🌱 Environment Variables
+
+Set up environment variables to configure your backend and frontend without hardcoding sensitive or environment-specific data.
+
+### 🗂️ How to Set Up
+
+#### Backend (`backend/`)
+- Create a `.env` file in the `backend/` directory (at the same level as `package.json`).
+- Example:
+  ```env
+  PORT=3001
+  # Add other backend environment variables here
+  ```
+- Access variables in code using `process.env.VARIABLE_NAME` (e.g., `process.env.PORT`).
+
+#### Frontend (`frontend/`)
+- Create a `.env` file in the `frontend/` directory(at the same level as package.json).
+- **All frontend environment variables must start with `VITE_`** (required by Vite).
+- Example:
+  ```env
+  VITE_REMOTE_URL=http://localhost:3001/logs
+  # Add other frontend environment variables here
+  ```
+- Access variables in code using `import.meta.env.VITE_VARIABLE_NAME` (e.g., `import.meta.env.VITE_REMOTE_URL`).
+
+### 🔒 Security
+- **Never commit your `.env` files to Git!**
+- Use a `.env.example` file to show required variables (without real secrets) for collaborators.
+
+---
+
 ## 🏁 Getting Started
 
 ### 1️⃣ Clone the Repository
@@ -87,30 +118,26 @@ cd Log-Inspector
 cd backend
 npm install
 ```
+### 3️⃣ Set up environment variables as described in the [🌱 Environment Variables](#-environment-variables) section.
 
-- 📝 Create a `.env` file in `backend/` (see `.env.example` if present):
-  ```env
-  PORT=3001
-  # Add other environment variables as needed
-  ```
-
-- ▶️ Start the backend server:
+### 4️⃣ Start the backend server:
   ```bash
-  npm run dev
-  # or for production
-  npm start
+  npm run dev # for development
+  npm start # for production
   ```
-- 🌐 The backend will run at `http://localhost:3002` by default.
+The backend will run at `http://localhost:3001` using the PORT from .env file. In case .env file is not read then backend will start at `http://localhost:3002` by default.
 
-### 3️⃣ Setup the Frontend
+### 5️⃣ Setup the Frontend
 ```bash
 cd ../frontend
 npm install
-npm run dev
-# or for production
-npm start
 ```
-- 🌐 The frontend will run at `http://localhost:5174` by default.
+### 6️⃣ Set up environment variables as described in the [🌱 Environment Variables](#-environment-variables) section.
+### 7️⃣ Start the frontend server:
+```bash
+npm run dev # for development
+```
+The frontend will run at `http://localhost:5174` by default.
 
 ---
 
