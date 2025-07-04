@@ -64,13 +64,21 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
             open={state.formOpen}
             onClose={handleClose}
             maxWidth="md"
+            fullWidth
+            PaperProps={{
+                sx: {
+                    m: { xs: 1, sm: 2 },
+                    width: { xs: '100%', sm: 'auto' },
+                    maxWidth: { xs: '95vw', sm: '600px' },
+                }
+            }}
         >
             <DialogTitle
                 sx={{
                     fontSize: '2rem',
                     fontWeight: 'bolder',
-                    '@media screen and (width <= 380px)': {
-                        fontSize: '1.5rem',
+                    '@media (max-width: 480px)': {
+                        fontSize: '1.25rem',
                     },
                     textTransform: 'capitalize',
                 }}
@@ -78,10 +86,10 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                 Add Log
             </DialogTitle>
 
-            <main className="w-full p-5 flex gap-3">
+            <main className="w-full p-5 flex flex-col gap-3 sm:flex-row sm:gap-3">
                 <form
                     onSubmit={handleSubmit(SubmitForm)}
-                    className="w-full min-w-xl flex flex-col items-center justify-center gap-4"
+                    className="w-full flex flex-col items-center justify-center gap-4"
                 >
                     <Box className="w-full flex flex-col items-center justify-center gap-5">
                         <FormControl fullWidth error={!!errors.level}>
@@ -109,6 +117,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                             minRows={3}
                             sx={{
                                 fontSize: { xs: '0.95rem', sm: '1rem' },
+                                '& .MuiInputBase-root': {
+                                    fontSize: { xs: '0.95rem', sm: '1rem' },
+                                },
                             }}
                         />
                         <TextField
@@ -119,6 +130,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                             fullWidth
                             sx={{
                                 fontSize: { xs: '0.95rem', sm: '1rem' },
+                                '& .MuiInputBase-root': {
+                                    fontSize: { xs: '0.95rem', sm: '1rem' },
+                                },
                             }}
                         />
                         <TextField
@@ -129,6 +143,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                             fullWidth
                             sx={{
                                 fontSize: { xs: '0.95rem', sm: '1rem' },
+                                '& .MuiInputBase-root': {
+                                    fontSize: { xs: '0.95rem', sm: '1rem' },
+                                },
                             }}
                         />
                         <TextField
@@ -139,6 +156,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                             fullWidth
                             sx={{
                                 fontSize: { xs: '0.95rem', sm: '1rem' },
+                                '& .MuiInputBase-root': {
+                                    fontSize: { xs: '0.95rem', sm: '1rem' },
+                                },
                             }}
                         />
                     </Box>
@@ -146,9 +166,9 @@ const Add_LogForm: FC<AddLogFormProps> = ({ onLogAdded }) => {
                     <Button
                         sx={{
                             mt: 2,
-                            '@media (max-width: 520px)': {
-                                mt: 1,
-                            },
+                            width: { xs: '100%', sm: 'auto' },
+                            fontSize: { xs: '0.95rem', sm: '1rem' },
+                            marginTop: { xs: 1, sm: 2 },
                         }}
                         variant="contained"
                         endIcon={<IoIosAddCircleOutline />}
